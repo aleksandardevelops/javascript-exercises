@@ -9,7 +9,15 @@ const sumAll = function (arg1, arg2) {
       agregator += i;
     }
   }
-
+  if (arg1 < 0 || arg2 < 0) {
+    return 'ERROR';
+  }
+  if (!Number.isInteger(arg1) || !Number.isInteger(arg2)) {
+    return 'ERROR';
+  }
+  if (isNaN(arg1) || isNaN(arg2)) {
+    return 'ERROR';
+  }
   return agregator;
 };
 
